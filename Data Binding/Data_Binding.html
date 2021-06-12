@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <h1>{{ title }} </h1>
+        
+        <form action="">
+            <label>Nhập tên</label>
+            <input type="name" placeholder="Nhập tên">
+            <label>Nhập Email</label>
+            <input type="email" name="" id="" placeholder="Nhập Email">
+            <input type="submit" value="nhập">
+        </form>
+        
+        <img v-bind:src="url" alt="ảnh">
+        <br>
+        <button v-on:click = "handleClick">Click x1</button>
+        <button v-on:click = "counter += 2">Click x2</button>
+        <button v-on:click = "handleClickNum ($event, 5)">Click x5</button>
+        <p>count Click : {{ counter }}</p>
+        <hr>
+        <div class="box" v-on:mousemove = "handleMouseMove">
+            <p>clienX = {{ clientX }} </p>
+            <p>clienY = {{ clientY }} </p>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
